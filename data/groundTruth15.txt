@@ -1,0 +1,2 @@
+num_subclones	tumor_purity	picked_tree	cluster_0	mut_0	cluster_1	mut_1	cluster_2	mut_2
+2	0.872488701062	1	1.0	87	0.303193173977	581	0.504221753059	1279
