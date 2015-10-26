@@ -1,9 +1,5 @@
 
-########################################################################
 # CTPsingle - clonality inference from low coverage single-sample tumors
-#
-# Author: Nilgun Donmez
-########################################################################
 
 CTPsingle is a tool that aims to infer the subclonal decomposition using low-coverage sequencing data from a single tumor sample. 
 
