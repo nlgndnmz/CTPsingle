@@ -34,11 +34,11 @@ Above, Chromosome and Position give the location of the mutation. Mutant and Ref
 
 In addition to a file formatted as above, you will need a folder containing tree structure files. This folder is supplied with the CTPsingle package and is called "GammaAdjMatrices". Typical usage of CTPsingle is as follows:
 
-Rscript CTPsingle.R -f <mutation_file> -o <output_prefix> -m <adjacency_matrices>
+` Rscript ./CTPsingle.R -f <mutation_file> -o <output_prefix> -m <adjacency_matrices> `
 
 where 'mutation_file' is a file formatted as described and 'output_prefix' is a prefix for CTPsingle's output. 'adjacency_matrices' should give the path of the GammaAdjMatrices folder. For your convenience, we also included a simulation dataset under './data'. To test CTPsingle, simply execute the following command from the installation directory:
 
-Rscript ./CTPsingle.R -f ./data/simulation15.frq -o ./data/simulation15 -m ./GammaAdjMatrices
+` Rscript ./CTPsingle.R -f ./data/simulation15.frq -o ./data/simulation15 -m ./GammaAdjMatrices `
 
 If execution is successful, the following files will be written under ./data:
 
