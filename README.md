@@ -5,7 +5,7 @@ CTPsingle is a tool that aims to infer the subclonal decomposition using low-cov
 
 -- INSTALLATION
 
-The core functionality of CTPsingle is implemented in R. If your system does not have R, you can install it for free-of-charge from https://www.r-project.org/ . In addition, CTPsingle requires the following R packages:
+The core functionality of CTPsingle is implemented in R. If your system does not have R, you can install it for free-of-charge from https://www.r-project.org/. In addition, CTPsingle requires the following R packages:
 
 - ggplot2
 - RColorBrewer
@@ -18,6 +18,8 @@ The best way to install these packages is to call the install.packages() functio
 
 To run CTPsingle, you need a single file containing mutant read counts formatted as follows:
 
+```
+
 Chromosome Position Mutant Reference Mcount Rcount Multiplier Gender
 8 116260205 C A 13 8 2 Female
 5 106280608 T C 12 29 2 Female
@@ -25,6 +27,8 @@ Chromosome Position Mutant Reference Mcount Rcount Multiplier Gender
 13 64241231 G A 15 34 2 Female
 9 34778288 C G 13 16 2 Female
 ...
+
+```
 
 Above, Chromosome and Position give the location of the mutation. Mutant and Reference columns give the variant and reference alleles at this location. Mcount and Rcount give the number of reads supporting the mutation and reference alleles respectively. Multiplier column contains the total copy count of the region containing the position in the tumor sample. Note that since CTPsingle does not handle amplified regions, this column should at most be 2. The Gender column should be one of Female, Male or unknown. If it is set to unknown, mutations on non-autosomal chromosomes are ignored.
 
@@ -38,6 +42,8 @@ Rscript ./CTPsingle.R -f ./data/simulation15.frq -o ./data/simulation15 -m ./Gam
 
 If execution is successful, the following files will be written under ./data:
 
+```
+
 simulation15.png
 simulation15_cls.png
 simulation15_frq.png
@@ -45,4 +51,7 @@ simulation15_cluster_assignments.txt
 simulation15_num_3_tree_1.txt
 simulation15_num_3_tree_2.txt
 
-For your convenience, the ground truth information for this dataset is also given at ./data/groundTruth15.txt.
+```
+
+For your convenience, the ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
+
