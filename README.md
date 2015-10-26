@@ -1,9 +1,10 @@
 
-# CTPsingle - clonality inference from low coverage single-sample tumors
+## CTPsingle - clonality inference from low coverage single-sample tumors
+###### author: Nilgun Donmez
 
 CTPsingle is a tool that aims to infer the subclonal decomposition using low-coverage sequencing data from a single tumor sample. 
 
--- INSTALLATION
+---- INSTALLATION
 
 The core functionality of CTPsingle is implemented in R. If your system does not have R, you can install it for free-of-charge from https://www.r-project.org/. In addition, CTPsingle requires the following R packages:
 
@@ -14,7 +15,7 @@ The core functionality of CTPsingle is implemented in R. If your system does not
 
 The best way to install these packages is to call the install.packages() function in R. Additionally, CTPsingle comes with several utility scripts written in Python. To run these, you will need Python2.7 and the numpy library.
 
--- RUNNING CTPsingle
+---- RUNNING CTPsingle
 
 To run CTPsingle, you need a single file containing mutant read counts formatted as follows:
 
@@ -26,7 +27,6 @@ Chromosome Position Mutant Reference Mcount Rcount Multiplier Gender
 9 62266747 G C 19 26 2 Female
 13 64241231 G A 15 34 2 Female
 9 34778288 C G 13 16 2 Female
-...
 
 ```
 
@@ -43,14 +43,12 @@ Rscript ./CTPsingle.R -f ./data/simulation15.frq -o ./data/simulation15 -m ./Gam
 If execution is successful, the following files will be written under ./data:
 
 ```
-
 simulation15.png
 simulation15_cls.png
 simulation15_frq.png
 simulation15_cluster_assignments.txt
 simulation15_num_3_tree_1.txt
 simulation15_num_3_tree_2.txt
-
 ```
 
 For your convenience, the ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
