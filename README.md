@@ -4,7 +4,7 @@
 
 CTPsingle is a tool that aims to infer the subclonal decomposition using low-coverage sequencing data from a single tumor sample. 
 
----- INSTALLATION
+#### INSTALLATION
 
 The core functionality of CTPsingle is implemented in R. If your system does not have R, you can install it for free-of-charge from https://www.r-project.org/. In addition, CTPsingle requires the following R packages:
 
@@ -15,7 +15,7 @@ The core functionality of CTPsingle is implemented in R. If your system does not
 
 The best way to install these packages is to call the install.packages() function in R. Additionally, CTPsingle comes with several utility scripts written in Python. To run these, you will need Python2.7 and the numpy library.
 
----- RUNNING CTPsingle
+#### RUNNING
 
 To run CTPsingle, you need a single file containing mutant read counts formatted as follows:
 
@@ -54,10 +54,12 @@ simulation15_num_3_tree_2.txt
 The simulation15_cluster_assignments.txt contains the assignment of the mutations to subclones. The 'mostLikely' column contains the ID of the subclone, while the 'averageFrequency' column gives the cancer cell fraction of that subcone. The figures visualize various aspects of the data. The '_num_X_Y.txt' files give possible tree topologies on X number of nodes (i.e. the number of subclones found). The last 4 columns of these files denote:
 
 ```
-... [ parent-node ] [ child-node ] [ cancer cell fraction of child node ] [ objective score ]
+... [ parent-node ] [ child-node ] [ cell fraction of child-node ] [ objective score ]
 ```
 
-which can be used the draw the tree structure. Node that the parent-node of the root node is always given as 0. A smaller objective score means that the data fits that tree structure better. In addition to these files, CTPsingle reports its progress and other statistics to the standard output. The ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
+which can be used the draw the tree structure. Note that the parent-node of the root node is always given as 0. A smaller objective score means that the data fits that tree structure better. In addition to these files, CTPsingle reports its progress and other statistics to the standard output. The ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
 
+#### UTILITY SCRIPTS
 
+CTPsingle package comes with additional python scripts intended for developers only. simulateDataset.py and evaluateDataset.py are internal scripts used to test the CTPsingle implementation. BeyerHedetmieni.py is used to generate the Gamma-Adjacency files under ./GammaAdjMatrices. You can run each script without arguments to see a brief instruction.
 
