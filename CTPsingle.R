@@ -14,7 +14,6 @@ library(lpSolve)
 usage <- function()
 {
 	warning("Usage: Rscript CTPsingle.R -f <mutation_file> -o <output_prefix> -m <adjacency_matrices> [ -r <num_restarts> -a <alpha> ]")
-	warning("For additional command line options please see the README.md file.")
 	quit()
 }
 

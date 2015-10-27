@@ -51,5 +51,13 @@ simulation15_num_3_tree_1.txt
 simulation15_num_3_tree_2.txt
 ```
 
-For your convenience, the ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
+The simulation15_cluster_assignments.txt contains the assignment of the mutations to subclones. The 'mostLikely' column contains the ID of the subclone, while the 'averageFrequency' column gives the cancer cell fraction of that subcone. The figures visualize various aspects of the data. The '_num_X_Y.txt' files give possible tree topologies on X number of nodes (i.e. the number of subclones found). The last 4 columns of these files denote:
+
+```
+... [ parent-node ] [ child-node ] [ cancer cell fraction of child node ] [ objective score ]
+```
+
+which can be used the draw the tree structure. Node that the parent-node of the root node is always given as 0. A smaller objective score means that the data fits that tree structure better. In addition to these files, CTPsingle reports its progress and other statistics to the standard output. The ground truth information for this dataset is also given at ./data/groundTruth15.txt. 
+
+
 
