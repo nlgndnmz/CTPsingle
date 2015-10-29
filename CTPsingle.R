@@ -1,9 +1,10 @@
+#!/usr/bin/env Rscript
 
 ##-------------------------------------------------------------------
 # Author: Nilgun Donmez
 # Date: September 10, 2015
 #
-# Part of CTPsingle package. 
+# Part of CTPsingle package. See README.md for more information.
 ##-------------------------------------------------------------------
 
 library(DPpackage)
@@ -13,7 +14,7 @@ library(lpSolve)
 
 usage <- function()
 {
-	warning("Usage: Rscript CTPsingle.R -f <mutation_file> -o <output_prefix> -m <adjacency_matrices> [ -r <num_restarts> -a <alpha> ]")
+	warning("Usage: CTPsingle.R -f <mutation_file> -o <output_prefix> -m <adjacency_matrices> [ -r <num_restarts> -a <alpha> ]")
 	quit()
 }
 
